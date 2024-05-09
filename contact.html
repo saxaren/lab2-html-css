@@ -4,42 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Jonas Hultberg</title>
-    <link rel="stylesheet" href="index.css" />
+    <!-- Include the Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <meta name="description" content="Såhär kontaktar ni mig" />
   </head>
-  <body>
+  <body class="bg-gray-100">
     <div class="wrapper">
-      <header>
-        <h1>Kontakta mig</h1>
+      <header class="bg-blue-500 py-4">
+        <h1 class="text-white text-3xl font-bold text-center">Kontakta mig</h1>
       </header>
-      <aside class="maila_mig">
-        <h2>Skicka ett mail till mig</h2>
-
+      <aside class="maila_mig mt-8">
+        <h2 class="text-2xl font-semibold text-gray-800">
+          Skicka ett mail till mig
+        </h2>
         <form
           action="mailto:jonas.hultberg@iths.se"
           method="post"
           enctype="text/plain"
+          class="mt-4"
         >
-          Name:<br />
-          <input type="text" name="Namn" /><br />
-          E-mail:<br />
-          <input type="text" name="epost" /><br />
-          Comment:<br />
-          <input type="text" name="kommentar" size="50" /><br /><br />
-          <input type="submit" value="Skicka" />
-          <input type="reset" value="Reset" />
+          <label for="namn" class="block">Name:</label>
+          <input
+            type="text"
+            id="namn"
+            name="Namn"
+            class="w-full border border-gray-300 rounded-md py-2 px-4 mb-2 focus:outline-none focus:border-blue-500"
+          />
+          <label for="epost" class="block">E-mail:</label>
+          <input
+            type="text"
+            id="epost"
+            name="epost"
+            class="w-full border border-gray-300 rounded-md py-2 px-4 mb-2 focus:outline-none focus:border-blue-500"
+          />
+          <label for="kommentar" class="block">Comment:</label>
+          <textarea
+            id="kommentar"
+            name="kommentar"
+            rows="4"
+            class="w-full border border-gray-300 rounded-md py-2 px-4 mb-2 focus:outline-none focus:border-blue-500"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mr-2"
+          >
+            Skicka
+          </button>
+          <button
+            type="reset"
+            class="bg-gray-300 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-400"
+          >
+            Reset
+          </button>
         </form>
       </aside>
-      <div class="tillbaka">
-        <a href="index.html">Tillbaka till startsidan</a>
+      <div class="tillbaka mt-4 text-center">
+        <a href="index.html" class="text-blue-500 hover:underline"
+          >Tillbaka till startsidan</a
+        >
       </div>
-
       <section>
         <!-- för att sätta höjden -->
       </section>
     </div>
-    <footer id="footer">
-      <h2>Copyright by Jonas H all rights reserved</h2>
+    <footer id="footer" class="bg-blue-500 py-4 mt-8">
+      <div class="container mx-auto text-white text-center">
+        <h2>&copy; Copyright by Jonas H all rights reserved</h2>
+      </div>
     </footer>
   </body>
 </html>
